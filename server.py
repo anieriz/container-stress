@@ -76,7 +76,7 @@ def run_stress(stress_cmd=None, cpulimit_percent=None):
     if not cpulimit_percent:
         Popen(shlex.split(stress_cmd))
         return
-    p = Popen(shlex.split("stress -c %d" % ((cpulimit_percent/100) + 1)))
+    p = Popen(shlex.split("stress-ng -c %d" % ((cpulimit_percent/100) + 1)))
     ps_cmd = Popen("ps -o pid --ppid %d --noheaders" % p.pid, shell=True,
                    stdout=subprocess.PIPE)
     stress_pids = [pid.decode("utf-8")

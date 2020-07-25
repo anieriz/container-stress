@@ -6,3 +6,20 @@ Contenedor que permite realizar pruebas de estres a nivel de infraestructura sat
 
 ## Uso
 
+1. Iniciar contenedor localmente:
+
+```bash
+docker run -ti -p 80:80 -m 512m --cpus 0.5 punkerside/container-stress:latest
+```
+
+2. Saturar RAM:
+
+```bash
+curl http://127.0.0.1/mem/300
+```
+
+2. Saturar CPU:
+
+```bash
+curl http://127.0.0.1/cpu/80
+```
