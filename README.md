@@ -18,8 +18,14 @@ docker run -ti -p 80:80 -m 512m --cpus 0.5 punkerside/container-stress:latest
 curl http://127.0.0.1/mem/300
 ```
 
-2. Saturar CPU:
+3. Saturar CPU:
 
 ```bash
 curl http://127.0.0.1/cpu/80
+```
+
+3. Limpiar procesos:
+
+```bash
+curl http://127.0.0.1/reset
 ```
