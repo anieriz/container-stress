@@ -20,4 +20,4 @@ RUN pip install flask psutil
 
 COPY server.py /opt/server.py
 
-CMD ["python", "/opt/server.py"]
+CMD ["python3", "/opt/server.py"]
