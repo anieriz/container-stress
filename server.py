@@ -18,7 +18,7 @@ def cpu(percent):
 
 @ app.route('/mem/<int:memory_size>', methods=['GET', 'POST'])
 def mem(memory_size):
-    run_stress(stress_cmd='stress -m 1 --vm-hang 1 --vm-bytes %dM' %
+    run_stress(stress_cmd='stress-ng -m 1 --vm-hang 1 --vm-bytes %dM' %
                memory_size)
     return "Your requested memory size is %d MB" % memory_size
 
